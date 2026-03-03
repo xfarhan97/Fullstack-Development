@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="C:\Uptech\Fullstack Developoment\Tasks\javascript-Project\Form\style.css">
+</head>
+<body>
+    
+   
+<div class="form-container">
+<h2>NEON REGISTER</h2>
+
+<form onsubmit="return validateForm()">
+
+<label>Full Name</label>
+<input type="text" id="fullname" oninput="validateName()">
+<div id="nameError" class="error"></div>
+
+<label>Email</label>
+<input type="email" id="email" oninput="validateEmail()">
+<div id="emailError" class="error"></div>
+
+<label>Password</label>
+<input type="password" id="password" oninput="validatePassword()">
+<div id="passwordError" class="error"></div>
+
+<label>Gender</label>
+<div class="radio-group">
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+</div>
+<div id="genderError" class="error"></div>
+
+<input type="submit" value="Register">
+
+</form>
+</div>
+
+
+    
+    
+    
+    
+    <script src="C:\Uptech\Fullstack Developoment\Tasks\javascript-Project\Form\script.js">
+
+    </script>
+</body>
+</html>
