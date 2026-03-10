@@ -64,7 +64,6 @@ return true;
 }
 
 function validateForm(){
-
 let n=validateName();
 let e=validateEmail();
 let p=validatePassword();
@@ -74,50 +73,6 @@ if(!n||!e||!p||!g){
 return false;
 }
 
-// Get values
-let name=document.getElementById("fullname").value;
-let email=document.getElementById("email").value;
-let password=document.getElementById("password").value;
-let gender=document.querySelector('input[name="gender"]:checked').value;
-
-// Create object
-let userData={
-    name:name,
-    email:email,
-    password:password,
-    gender:gender
-};
-
-// STORE IN LOCAL STORAGE
-localStorage.setItem("userData", JSON.stringify(userData));
-
-// STORE IN SESSION STORAGE
-sessionStorage.setItem("sessionUser", JSON.stringify(userData));
-
-alert("Data Saved Successfully!");
-
-return false; // prevent actual form submission
+alert("Form submitted successfully!");
+return true;
 }
-
-window.onload=function(){
-
-// Load from Local Storage
-let savedData=localStorage.getItem("userData");
-
-if(savedData){
-let data=JSON.parse(savedData);
-
-document.getElementById("fullname").value=data.name;
-document.getElementById("email").value=data.email;
-document.getElementById("password").value=data.password;
-
-if(data.gender==="male"){
-document.querySelector('input[value="male"]').checked=true;
-}else{
-document.querySelector('input[value="female"]').checked=true;
-}
-}
-
-}
-
-

@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1f1c2c);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* Animated Background */
+@keyframes gradientMove{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* FORM CONTAINER */
+.form-container{
+    width:450px;
+    padding:50px;
+    border-radius:20px;
+    backdrop-filter: blur(20px);
+    background: rgba(255,255,255,0.08);
+    box-shadow:0 0 40px rgba(0,255,255,0.3);
+    animation: fadeInScale 1.2s ease forwards;
+    transform:scale(0.6);
+}
+
+/* Form entrance animation */
+@keyframes fadeInScale{
+    to{
+        opacity:1;
+        transform:scale(0.8);
+    }
+}
+
+h2{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+    font-size:28px;
+    letter-spacing:2px;
+    text-shadow:0 0 15px #00f2ff;
+}
+
+/* INPUT FIELDS */
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    width:100%;
+    padding:15px;
+    margin-top:10px;
+    margin-bottom:15px;
+    border-radius:12px;
+    border:2px solid transparent;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    font-size:16px;
+    transition:0.4s;
+}
+
+input:focus{
+    border:2px solid #00f2ff;
+    box-shadow:0 0 20px #00f2ff;
+    transform:scale(1.05);
+}
+
+/* BUTTON */
+input[type="submit"]{
+    width:100%;
+    padding:15px;
+    border-radius:12px;
+    border:none;
+    font-size:18px;
+    font-weight:bold;
+    background:#00f2ff;
+    color:black;
+    cursor:pointer;
+    transition:0.4s;
+    animation: pulse 2s infinite;
+}
+
+input[type="submit"]:hover{
+    background:white;
+    box-shadow:0 0 30px #00f2ff;
+    transform:scale(1.1);
+}
+
+/* Button pulse animation */
+@keyframes pulse{
+    0%{box-shadow:0 0 10px #00f2ff}
+    50%{box-shadow:0 0 30px #00f2ff}
+    100%{box-shadow:0 0 10px #00f2ff}
+}
+
+/* RADIO GROUP */
+.radio-group{
+    margin:10px 0 15px 0;
+    color:white;
+}
+
+label{
+    color:white;
+    font-size:15px;
+}
+
+.error{
+    color:#ff4d4d;
+    font-size:13px;
+    height:15px;
+}
+
+.success-border{
+    border:2px solid #00ff88 !important;
+    box-shadow:0 0 20px #00ff88 !important;
+}
+
+.error-border{
+    border:2px solid #ff4d4d !important;
+    box-shadow:0 0 20px #ff4d4d !important;
+}
+
+/* Floating animation */
+.form-container:hover{
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px)}
+    50%{transform:translateY(-10px)}
+    100%{transform:translateY(0px)}
+}
